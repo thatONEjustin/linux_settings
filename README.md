@@ -1,5 +1,5 @@
 # linux_settings
-Just some basic linux stuff!
+Just some basic linux stuff! Copy this fie into Obsidian notes for a much better reading experience
 
 ### Smooth Tips
 
