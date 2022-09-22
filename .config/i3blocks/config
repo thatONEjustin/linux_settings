@@ -1,0 +1,14 @@
+[disk]
+command=df -h / | awk '/\//{ printf(" %4s/%s \n", $4, $2) }'
+interval=2
+color=#4287f5
+
+[time]
+command=date '+Today is %A, %B %d, %Y, it is %I:%M:%S %P'
+interval=1
+
+#[cpu]
+#full_text= CPU:  0.00% @ +00.0°C 
+#command=~/.config/i3blocks/cpu/cpu_info.sh
+#interval=repeat
+#color=#00B4EB
