@@ -1,4 +1,4 @@
-```
+---
 version: "2.1"
 services:
   deluge:
@@ -17,4 +17,3 @@ services:
       - 6881:6881
       - 6881:6881/udp
     restart: unless-stopped
-```

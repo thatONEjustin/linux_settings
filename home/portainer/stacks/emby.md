@@ -1,4 +1,4 @@
-```
+---
 version: "2.3"
 services:
   emby:
@@ -22,4 +22,3 @@ services:
     devices:
       - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
     restart: unless-stopped
-```
