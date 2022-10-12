@@ -7,8 +7,9 @@ typically typing a linux command followed by `-h` or `--help` is a safe way to s
 
 the $ is part of linux itself, not the command to run. 
 
-```markdown
+```shell
 $ cp -h 
+# this is the copy command
 ```
 
 outputs:
@@ -36,13 +37,15 @@ $ chown -R user:group dir
 
 $ rm -rf dir/file.ext
 # remove aka delete aka be very very careful with this. prob best to always make a copy of a file when using this. the flags -rf will recursively force the removal. 
+
+# probably even safer to run with the -i flag 
 ```
 
 A good thing to remember is that `~` leads to your home directory. 
 
 ```shell
 $ cd ~
-# goes do your home directory
+# goes to your home directory
 
 $ ls ~
 # lists your home directory contents
@@ -50,13 +53,16 @@ $ ls ~
 
 The `.` and `..` commands work with traversing directories, in any base linux command that uses directories.
 
+this example assumes your terminal setup shows your current working directory (CWD) or rather everything to the left of the $ (or your blinking cursor)
 ```shell
-# this example assumes your terminal setup shows your current working directory (CWD).
+/home $ cp /path/to/.file .
+# copy: /path/to/.file to /home/.file
 
-/home $ cp ~/example/.config .
-# this would copy the file or directory of .config to /home 
+# its important to note that there's a period after .file, thats just indicating to move it to your current directory.
+```
 
-/home $ mv ~/example/.config .. 
-# this moves the file 1 directory up from /home
+```shell
+/home $ mv file.ext .. 
+# moves: /home/file.ext up 1 directory (so /file.ext in this case)
 ```
 
