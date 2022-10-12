@@ -11,9 +11,9 @@ services:
       - MAXMEM=1024
     volumes:
       - /portainer/ubooquity/config:/config
-      - /portainer/books:/books
-      - /portainer/comics:/comics
-      - /portainer/images:/images
+      - /media/books:/books
+      - /media/comics:/comics
+      - /media/images:/images
     ports:
       - 2202:2202
       - 2203:2203
