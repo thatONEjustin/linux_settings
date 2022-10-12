@@ -120,6 +120,9 @@ alias torrents="cd $downloads"
 alias sedit="sudo nano /etc/samba/smb.conf"
 alias ipshow='ip -c link show'
 
+# faster edit of the sources list
+alias sources="sudo nano /etc/apt/sources.list"
+
 # ZSH stuff
 alias zedit="nano $HOME/.zshrc" 
 alias zload="source $HOME/.zshrc"
@@ -127,13 +130,23 @@ alias zhist="sudo nano $HOME/.zsh_history"
 alias zthemes="ls $ZSH/themes"
 
 # i3 stuff
-alias i3conf="nano $HOME/.config/i3/config"
-alias i3bconf="nano $HOME/.config/i3blocks/config"
+#alias i3conf="nano $HOME/.config/i3/config"
+#alias i3bconf="nano $HOME/.config/i3blocks/config"
 
-
+# rofi if I need it
 alias rofid='cd $HOME/.local/share/rofi/themes'
-alias media='cd $media'
 
+
+# mysql aliasing for dockerized mysql access
+# you can bake in a -p<password> but this is just for my personal stuff so 
+#alias mysql="docker exec -t <docker container id> mysql -uroot"
+#alias mysqldump="docker exec <docker container id> mysqldump -uroot"
+
+# Jekyll alias to make sure the env is set, has additional flags for better reading
+#alias jekyll="JEKYLL_ENV=production bundle exec jekyll serve --trace --verbose"
+
+# update system
+alias wiarae="sudo apt update && sudo apt upgrade"
 
 # history
 HISTSIZE=5000
