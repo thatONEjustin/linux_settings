@@ -64,6 +64,9 @@ this example assumes your terminal setup shows your current working directory (C
 # copy: /path/to/.file to /home/.file
 
 # its important to note that there's a period after .file, thats just indicating to move it to your current directory.
+
+/home $ cp -r --update -T new_dir ./*
+# this will copy a directory's file structure recursively, then *only* update new files, while making sure that they are stored in `new_dir/` 
 ```
 
 ```shell
@@ -83,4 +86,9 @@ For (or rather `for`) can loop through iterations of matching patterns and run c
 
 /current_dir $ for z in $path/*/to-file*.ext; sudo cp $z .;
 # wildcards can be passed to search through subdirectories and filenames
+```
+
+```shell
+$ ls -tr
+# lists files according to date added. the r flag reverses the order so that newest files/directories are at the bottom (easier to read in terminal)
 ```
