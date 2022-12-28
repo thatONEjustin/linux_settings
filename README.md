@@ -17,6 +17,7 @@ $ cp: invalid option -- 'h'
 Try 'cp --help' for more information.
 ```
 
+---
 many basic linux commands are shared between distros (fedora, ubuntu, arch):
 ```shell
 $ cp /original/file.extension /destination/file.extension 
@@ -38,6 +39,8 @@ $ rm -rf dir/file.ext
 # remove aka delete aka be very very careful with this. prob best to always make a copy of a file when using this. the flags -rf will recursively force the removal. 
 ```
 
+---
+
 A good thing to remember is that `~` leads to your home directory. 
 
 ```shell
@@ -47,6 +50,8 @@ $ cd ~
 $ ls ~
 # lists your home directory contents
 ```
+
+---
 
 The `.` and `..` commands work with traversing directories, in any base linux command that uses directories.
 
@@ -60,3 +65,16 @@ The `.` and `..` commands work with traversing directories, in any base linux co
 # this moves the file 1 directory up from /home
 ```
 
+---
+
+For (or rather `for`) can loop through iterations of matching patterns and run commands
+
+```shell
+/current_dir $ for z in $path/to-file.ext; sudo cp $z .;
+#  $z is set to whatever matches the glob passed between `in` and the first ;
+# the `.` after $z refers to `/current_dir`, not the directory that the loop is iterating through
+
+
+/current_dir $ for z in $path/*/to-file*.ext; sudo cp $z .;
+# wildcards can be passed to search through subdirectories and filenames
+```
